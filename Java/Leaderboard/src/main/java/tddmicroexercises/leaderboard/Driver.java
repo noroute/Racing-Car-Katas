@@ -18,6 +18,8 @@ public class Driver {
         return country;
     }
 
+    public String getDisplayName() { return name;}
+
     @Override
     public int hashCode() {
         return name.hashCode() * 31 + country.hashCode();
@@ -28,7 +30,7 @@ public class Driver {
         if (this == obj) {
             return true;
         }
-        if (obj == null || !(obj instanceof Driver)) {
+        if (obj == null || !(obj.getClass().equals(Driver.class))) {
             return false;
         }
         Driver other = (Driver) obj;

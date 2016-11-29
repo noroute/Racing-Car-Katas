@@ -53,4 +53,9 @@ public class LeaderboardTest {
         // note: the order of driver1 and driver2 is JDK/platform dependent
     }
 
+    @Test
+    public void shouldNotEatDrivers() {
+        assertEquals(2, TestData.leaderboardWithNameCollision.driverRankings().size());
+    }
+
 }
